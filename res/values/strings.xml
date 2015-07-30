@@ -2,5 +2,7 @@
 <resources>
 
     <string name="app_name">一点一刻</string>
-
+    <string name="onedot">一点</string>
+    <string name="oneke">一刻</string>
+    <string name="circle">圈子</string>
 </resources>

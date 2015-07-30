@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
+    
+    <include layout="@layout/title_bar"/>
     <!-- 容器 -->
     <FrameLayout 
         android:layout_width="match_parent"
@@ -13,7 +15,7 @@
     
     <LinearLayout 
         android:layout_width="match_parent"
-        android:layout_height="44dp"
+        android:layout_height="wrap_content"
         android:baselineAligned="false"
         >
         <!-- 第一个tab -->
@@ -21,23 +23,25 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:id="@+id/tab1"
             >
             <LinearLayout 
                 android:layout_centerVertical="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:gravity="center"
                 >
                 <ImageView 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_launcher"
-                    android:layout_gravity="center_vertical"
                     android:contentDescription="sss"/>
                 <TextView 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="circle"/>
+                    android:text="@string/onedot"
+                    android:textColor="#ffffff"/>
             </LinearLayout>
         </RelativeLayout>
         <!-- 第二个tab -->
@@ -45,23 +49,24 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:id="@+id/tab2"
             >
             <LinearLayout 
                 android:layout_centerVertical="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:gravity="center"
                 >
                 <ImageView 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_launcher"
-                    android:layout_gravity="center_vertical"
                     android:contentDescription="sss"/>
                 <TextView 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="circle"/>
+                    android:text="@string/oneke"/>
             </LinearLayout>
         </RelativeLayout>
         <!-- 第三个tab -->
@@ -69,23 +74,24 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:id="@+id/tab3"
             >
             <LinearLayout 
                 android:layout_centerVertical="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:gravity="center"
                 >
                 <ImageView 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_launcher"
-                    android:layout_gravity="center_vertical"
                     android:contentDescription="sss"/>
                 <TextView 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="circle"/>
+                    android:text="@string/circle"/>
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>

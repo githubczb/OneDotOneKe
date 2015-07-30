@@ -1,5 +1,7 @@
 package com.onedot.onedotoneke.fragment;
 
+import com.onedot.onedotoneke.R;
+
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,14 +13,16 @@ public class OneKeFragment extends Fragment {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 	}
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater,
 			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
-		return super.onCreateView(inflater, container, savedInstanceState);
+        super.onCreateView(inflater, container, savedInstanceState);
+		
+		View view = LayoutInflater.from(getActivity()).inflate(
+				R.layout.fragment_oneke, null);
+		return view;
 	}
 }
