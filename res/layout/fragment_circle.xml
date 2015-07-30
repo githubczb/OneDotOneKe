@@ -4,7 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white" >
+    android:background="#808080" >
     
-
+    <com.onedot.onedotoneke.view.RefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/refresh_layout"
+        >
+        
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/list_view_circle"
+            android:divider="#FFCC00"
+            android:dividerHeight="1px"
+            android:listSelector="@drawable/list_item_selector"
+            android:background="@color/white"/>
+    </com.onedot.onedotoneke.view.RefreshLayout>
+    
 </LinearLayout>

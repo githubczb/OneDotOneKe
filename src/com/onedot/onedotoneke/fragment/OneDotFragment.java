@@ -1,15 +1,15 @@
 package com.onedot.onedotoneke.fragment;
 
 import com.onedot.onedotoneke.R;
+import com.onedot.onedotoneke.base.BaseFragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-public class OneDotFragment extends Fragment {
+public class OneDotFragment extends BaseFragment {
 
 	private ListView mDotListView;
 	
