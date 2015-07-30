@@ -8,8 +8,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 public class OneDotFragment extends Fragment {
 
+	private ListView mDotListView;
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -22,6 +25,7 @@ public class OneDotFragment extends Fragment {
 		
 		View view = LayoutInflater.from(getActivity()).inflate(
 				R.layout.fragment_onedot, null);
+		mDotListView = (ListView)view.findViewById(R.id.dot_list_view);
 		return view;
 	}
 }

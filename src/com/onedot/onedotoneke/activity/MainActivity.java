@@ -25,10 +25,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 	private CircleFragment mCircleFragment;
 	
 	private FrameLayout mContainer;
-	private View mtab1,mtab2,mtab3;
+	private View mtab1,mtab2,mtab3,mtab4;
 	
 	private TextView mTitleText;
-	
+	private int mCurTab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,12 +51,17 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 		mtab1 = findViewById(R.id.tab1);
 		mtab2 = findViewById(R.id.tab2);
 		mtab3 = findViewById(R.id.tab3);
+		mtab4 = findViewById(R.id.tab4);
 		
 		mtab1.setOnClickListener(this);
 		mtab2.setOnClickListener(this);
 		mtab3.setOnClickListener(this);
+		mtab4.setOnClickListener(this);
 		
 		mTitleText = (TextView)findViewById(R.id.title_text);
+		mTitleText.setText("一点");
+		
+		mCurTab = 1;
 	}
 
 	@Override
@@ -65,19 +70,32 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 		FragmentTransaction ft = fm.beginTransaction();
 		switch (view.getId()) {
 		case R.id.tab1:
+			if(mCurTab == 1)break;
 	        ft.replace(R.id.container, mOneDotFragment);
 	        ft.commit();
 	        mTitleText.setText("一点");
+	        mCurTab = 1;
 			break;
 		case R.id.tab2:
+			if(mCurTab == 2)break;
 	        ft.replace(R.id.container, mOneKeFragment);
 	        ft.commit();
 	        mTitleText.setText("一刻");
+	        mCurTab = 2;
 			break;
 		case R.id.tab3:
+			if(mCurTab == 3)break;
+	        ft.replace(R.id.container, mCircleFragment);
+	        ft.commit();
+	        mTitleText.setText("聊天");
+	        mCurTab = 3;
+			break;
+		case R.id.tab4:
+			if(mCurTab == 4)break;
 	        ft.replace(R.id.container, mCircleFragment);
 	        ft.commit();
 	        mTitleText.setText("圈子");
+	        mCurTab = 4;
 			break;
 		default:
 			break;
