@@ -13,6 +13,12 @@ import android.widget.AbsListView.OnScrollListener;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
+/*
+ * @author:莫胜磊
+ * @time:2015.7.31
+ * @class:RefreshLayout
+ * @function:下拉刷新的 ListView Layout
+ */
 public class RefreshLayout extends LinearLayout implements OnScrollListener{
 
 	private View mHeader;
@@ -21,6 +27,14 @@ public class RefreshLayout extends LinearLayout implements OnScrollListener{
 	private int mYOffset;
 	private ListView mListView;
 	private OnRefreshListener mOnRefreshListener;
+	
+	private static int STATUS_FINISHED = 1;
+	
+	private static int STATUS_REFRESHING = 2;
+	
+	private static int STATUS_RELEASE = 3;
+	
+	private int curStatus = STATUS_FINISHED;
 	
 	//构造函数
 	public RefreshLayout(Context context, AttributeSet attrs) {
@@ -36,7 +50,9 @@ public class RefreshLayout extends LinearLayout implements OnScrollListener{
 	
 	//刷新结束
 	public void refreshComplete(){
-		scrollTo(0, mInitScrollY);
+		
+		if(curStatus == STATUS_RELEASE)
+			scrollTo(0, mInitScrollY);
 	}
 	
 	private boolean isTop(){
@@ -86,9 +102,11 @@ public class RefreshLayout extends LinearLayout implements OnScrollListener{
             int currentY = (int) event.getRawY();  
             mYOffset = currentY - mLastY;
             changeScrollY(mYOffset);
-            mLastY = currentY;  
+            mLastY = currentY;
+            curStatus = STATUS_REFRESHING;
             break;  
         case MotionEvent.ACTION_UP:
+        	curStatus = STATUS_RELEASE;
         	scrollTo(0, 0);
         	if(mOnRefreshListener != null){
         		mOnRefreshListener.refresh();
@@ -133,7 +151,7 @@ public class RefreshLayout extends LinearLayout implements OnScrollListener{
      */  
     private void changeScrollY(int distance) {   
         int curY = getScrollY(); 
-        scrollBy(0, -distance);  
+        scrollBy(0, -distance/2);  
         curY = getScrollY();  
         int slop = mInitScrollY / 2;
     }

@@ -11,6 +11,6 @@
     <!-- 描边 -->
     <stroke
         android:width="1dp"
-        android:color="@android:color/black"
+        android:color="#F0F0F0"
         />
 </shape>

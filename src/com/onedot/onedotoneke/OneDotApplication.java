@@ -11,6 +11,10 @@ import android.content.Context;
  */
 public class OneDotApplication extends Application {
 
+	private static final String TAG = "OneDotApplication";
+	
+	private static OneDotApplication instance;
+	
 	private EMChatHandler mEmChatHelper;
 	
 	private NotificationHandler mNotificationHelper;
@@ -19,9 +23,15 @@ public class OneDotApplication extends Application {
 	
 	private XinGePushHandler mXinGePushHandler;
 	
+    public static OneDotApplication sharedApplication() {
+    	assert(instance != null);
+    	return instance;
+    	}
+	    
 	@Override
 	public void onCreate() {
 		super.onCreate();
+		instance = this;
 		mContext = getApplicationContext();
 		mEmChatHelper = EMChatHandler.getInstance();
 		mEmChatHelper.init(mContext);
