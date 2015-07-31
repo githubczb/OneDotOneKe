@@ -6,6 +6,12 @@ import android.view.View;
 import com.onedot.onedotoneke.R;
 import com.onedot.onedotoneke.base.BaseActivity;
 
+/*
+ * @author:ÄªÊ¤ÀÚ
+ * @time:2015.7.31
+ * @class:CircleContentActivity
+ * @function:È¦×ÓÏêÇéÒ³
+ */
 public class CircleContentActivity extends BaseActivity implements View.OnClickListener{
 
 	private View mBackFrame;

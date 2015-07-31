@@ -4,22 +4,33 @@ import android.app.Application;
 import android.content.Context;
 
 /*
- * author:莫胜磊
- * time:2015.7.31
- * class：OneDotApplication
- * function:一点一刻 Appliction
+ * @author:莫胜磊
+ * @time:2015.7.31
+ * @class：OneDotApplication
+ * @function:一点一刻 Appliction
  */
 public class OneDotApplication extends Application {
 
-	private EMChatHelper mEmChatHelper;
+	private EMChatHandler mEmChatHelper;
+	
+	private NotificationHandler mNotificationHelper;
 	
 	private Context mContext;
+	
+	private XinGePushHandler mXinGePushHandler;
 	
 	@Override
 	public void onCreate() {
 		super.onCreate();
 		mContext = getApplicationContext();
-		mEmChatHelper = EMChatHelper.getInstance();
+		mEmChatHelper = EMChatHandler.getInstance();
 		mEmChatHelper.init(mContext);
+		
+		mNotificationHelper = NotificationHandler.getInstance();
+		mNotificationHelper.init(mContext);
+		
+		mXinGePushHandler = XinGePushHandler.getInstance();
+		mXinGePushHandler.init(mContext);
+		
 	}
 }

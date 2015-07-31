@@ -10,10 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /*
- * author:ÄªÊ¤ÀÚ
- * time£º2015.7.30
- * class:OneKeFragment
- * function:Ò»¿Ì
+ * @author:ÄªÊ¤ÀÚ
+ * @time£º2015.7.30
+ * @class:OneKeFragment
+ * @function:Ò»¿Ì
  */
 public class OneKeFragment extends BaseFragment {
 
