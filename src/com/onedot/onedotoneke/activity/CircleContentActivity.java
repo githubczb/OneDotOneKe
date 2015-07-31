@@ -18,6 +18,7 @@ public class CircleContentActivity extends BaseActivity implements View.OnClickL
 		mBackFrame = findViewById(R.id.back_frame);
 		mBackFrame.setVisibility(View.VISIBLE);
 		mBackFrame.setOnClickListener(this);
+		
 	}
 
 	@Override
