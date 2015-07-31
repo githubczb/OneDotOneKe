@@ -4,6 +4,7 @@ import com.onedot.onedotoneke.R;
 
 import android.content.Context;
 import android.support.v4.view.MotionEventCompat;
+import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -154,5 +155,10 @@ public class RefreshLayout extends LinearLayout implements OnScrollListener{
 	public interface OnRefreshListener{
 		
 		public void refresh();
+	}
+
+	public void setRefreshCompleteListener(OnRefreshListener onRefreshListener) {
+		// TODO Auto-generated method stub
+		
 	}
 }

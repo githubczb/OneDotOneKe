@@ -1,22 +1,22 @@
 package com.onedot.onedotoneke.fragment;
 
-import com.onedot.onedotoneke.R;
-import com.onedot.onedotoneke.activity.CircleContentActivity;
-import com.onedot.onedotoneke.adapter.CircleAdapter;
-import com.onedot.onedotoneke.base.BaseFragment;
-import com.onedot.onedotoneke.view.RefreshLayout;
-import com.onedot.onedotoneke.view.RefreshLayout.OnRefreshListener;
-
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+
+import com.onedot.onedotoneke.R;
+import com.onedot.onedotoneke.activity.CircleContentActivity;
+import com.onedot.onedotoneke.adapter.CircleAdapter;
+import com.onedot.onedotoneke.base.BaseFragment;
+import com.onedot.onedotoneke.view.RefreshLayout;
 /*
  * author:ÄªÊ¤ÀÚ
  * time£º2015.7.30
