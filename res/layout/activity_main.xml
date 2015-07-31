@@ -13,11 +13,18 @@
         android:id="@+id/container"
         android:layout_weight="1"/>
     
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dark"/>
     <LinearLayout 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:baselineAligned="false"
+        android:paddingTop="10dp"
+        android:background="@color/white"
         >
+        
         <!-- 第一个tab -->
         <RelativeLayout 
             android:layout_width="0dp"
@@ -33,15 +40,15 @@
                 android:gravity="center"
                 >
                 <ImageView 
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:src="@drawable/onedot"
                     android:contentDescription="sss"/>
                 <TextView 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/onedot"
-                    android:textColor="#ffffff"/>
+                    />
             </LinearLayout>
         </RelativeLayout>
         <!-- 第二个tab -->
@@ -59,9 +66,9 @@
                 android:gravity="center"
                 >
                 <ImageView 
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:src="@drawable/oneke"
                     android:contentDescription="sss"/>
                 <TextView 
                     android:layout_width="wrap_content"
@@ -84,9 +91,9 @@
                 android:gravity="center"
                 >
                 <ImageView 
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:src="@drawable/chat"
                     android:contentDescription="sss"/>
                 <TextView 
                     android:layout_width="wrap_content"
@@ -109,9 +116,9 @@
                 android:gravity="center"
                 >
                 <ImageView 
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:src="@drawable/circle"
                     android:contentDescription="sss"/>
                 <TextView 
                     android:layout_width="wrap_content"

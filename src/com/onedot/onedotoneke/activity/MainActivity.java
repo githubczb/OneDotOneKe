@@ -2,6 +2,7 @@ package com.onedot.onedotoneke.activity;
 
 import com.onedot.onedotoneke.R;
 import com.onedot.onedotoneke.base.BaseActivity;
+import com.onedot.onedotoneke.fragment.ChatFragment;
 import com.onedot.onedotoneke.fragment.CircleFragment;
 import com.onedot.onedotoneke.fragment.OneDotFragment;
 import com.onedot.onedotoneke.fragment.OneKeFragment;
@@ -23,6 +24,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 	private OneDotFragment mOneDotFragment;
 	private OneKeFragment mOneKeFragment;
 	private CircleFragment mCircleFragment;
+	private ChatFragment mChatFragment;
 	
 	private FrameLayout mContainer;
 	private View mtab1,mtab2,mtab3,mtab4;
@@ -38,6 +40,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         mOneDotFragment = new OneDotFragment();
         mOneKeFragment = new OneKeFragment();
         mCircleFragment = new CircleFragment();
+        mChatFragment = new ChatFragment();
         
         mContainer = (FrameLayout)findViewById(R.id.container);
         FragmentManager fm = getSupportFragmentManager();
@@ -64,6 +67,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 		mCurTab = 1;
 	}
 
+	public View getAddView(){
+		
+		return findViewById(R.id.add);
+	}
 	@Override
 	public void onClick(View view) {
 		FragmentManager fm = getSupportFragmentManager();
@@ -85,7 +92,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 			break;
 		case R.id.tab3:
 			if(mCurTab == 3)break;
-	        ft.replace(R.id.container, mCircleFragment);
+	        ft.replace(R.id.container, mChatFragment);
 	        ft.commit();
 	        mTitleText.setText("ÁÄÌì");
 	        mCurTab = 3;

@@ -1,15 +1,21 @@
 package com.onedot.onedotoneke.fragment;
 
 import com.onedot.onedotoneke.R;
+import com.onedot.onedotoneke.base.BaseFragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class OneKeFragment extends Fragment {
+/*
+ * author:ÄªÊ¤ÀÚ
+ * time£º2015.7.30
+ * class:OneKeFragment
+ * function:Ò»¿Ì
+ */
+public class OneKeFragment extends BaseFragment {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

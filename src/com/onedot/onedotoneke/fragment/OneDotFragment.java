@@ -6,9 +6,11 @@ package com.onedot.onedotoneke.fragment;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.onedot.onedotoneke.R;
+import com.onedot.onedotoneke.base.BaseFragment;
+
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +22,7 @@ import com.onedot.onedotoneke.R;
 import com.onedot.onedotoneke.adapter.OneDotAdapter;
 import com.onedot.onedotoneke.api.OneDotAPI;
 import com.onedot.onedotoneke.api.OneDotAPI.OneDotInfo;
-public class OneDotFragment extends Fragment {
+public class OneDotFragment extends BaseFragment {
 
 	private ListView mDotListView;
 	private OneDotAdapter oneDotAdapter;

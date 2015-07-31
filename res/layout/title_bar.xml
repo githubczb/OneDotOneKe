@@ -1,14 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="44dp"
+    android:layout_height="45dp"
     android:orientation="vertical"
     android:background="@color/white"
-    android:gravity="center" >
+    >
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        >
     
+    <FrameLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:id="@+id/back_frame"
+        >
+        <ImageView 
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/back_icon"/>
+    </FrameLayout>
     <TextView 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Title"
-        android:id="@+id/title_text"/>
+        android:id="@+id/title_text"
+        android:layout_centerInParent="true"/>
+    
+    <FrameLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:id="@+id/add">
+        <ImageView 
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/add"/>
+    </FrameLayout>
+     <View 
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dark"/>
+    </RelativeLayout>
+     <View 
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/dark"/>
+
 </LinearLayout>
+
