@@ -157,8 +157,4 @@ public class RefreshLayout extends LinearLayout implements OnScrollListener{
 		public void refresh();
 	}
 
-	public void setRefreshCompleteListener(OnRefreshListener onRefreshListener) {
-		// TODO Auto-generated method stub
-		
-	}
 }
