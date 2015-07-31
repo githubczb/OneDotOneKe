@@ -5,6 +5,7 @@ import com.onedot.onedotoneke.R;
 import android.content.Context;
 import android.support.v4.view.MotionEventCompat;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -26,6 +27,7 @@ public class RefreshLayout extends LinearLayout implements OnScrollListener{
 	private int mLastY;
 	private int mYOffset;
 	private ListView mListView;
+	
 	private OnRefreshListener mOnRefreshListener;
 	
 	private static int STATUS_FINISHED = 1;
@@ -44,7 +46,12 @@ public class RefreshLayout extends LinearLayout implements OnScrollListener{
         addView(mHeader , 0);
 	}
 	
-	public void setRefreshCompleteListener(OnRefreshListener onRefreshListener){
+	/*
+	 * @ÉèÖÃË¢ÐÂµÄ¼àÌýÆ÷
+	 * @onRefreshListener
+	 * @Ë¢ÐÂ¼àÌýÆ÷
+	 */
+	public void setRefreshListener(OnRefreshListener onRefreshListener){
 		mOnRefreshListener = onRefreshListener;
 	}
 	
@@ -149,11 +156,8 @@ public class RefreshLayout extends LinearLayout implements OnScrollListener{
      * @param distance 
      * @return 
      */  
-    private void changeScrollY(int distance) {   
-        int curY = getScrollY(); 
-        scrollBy(0, -distance/2);  
-        curY = getScrollY();  
-        int slop = mInitScrollY / 2;
+    private void changeScrollY(int distance) {
+    	scrollBy(0, -distance/2);  
     }
     
 	@Override

@@ -44,7 +44,7 @@ public class CircleFragment extends BaseFragment implements OnItemClickListener{
 		mListViewCircle = (ListView)view.findViewById(R.id.list_view_circle);
 		mRefreshLayout = (RefreshLayout)view.findViewById(R.id.refresh_layout);
 		
-		mRefreshLayout.setRefreshCompleteListener(new OnRefreshListener() {
+		mRefreshLayout.setRefreshListener(new OnRefreshListener() {
 			
 			@Override
 			public void refresh() {
