@@ -36,7 +36,7 @@ public class SplashActivity extends BaseActivity {
 							e.printStackTrace();
 						}
 					}
-					startActivity(new Intent(SplashActivity.this, RegisterActivity.class));
+					startActivity(new Intent(SplashActivity.this, WelcomeActivity.class));
 					finish();
 			}
 		}).start();

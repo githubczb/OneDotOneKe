@@ -36,24 +36,21 @@
             android:name="com.onedot.onedotoneke.activity.MainActivity"
             android:label="@string/app_name" >
         </activity>
-        
-        <activity 
-            android:name="com.onedot.onedotoneke.activity.CircleContentActivity"
-            />
-        <activity 
-            android:name="com.onedot.onedotoneke.activity.FriendsActivity"/>
-        <activity 
-            android:name="com.onedot.onedotoneke.activity.SplashActivity">
+        <activity android:name="com.onedot.onedotoneke.activity.SplashActivity">
+            
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity 
-            android:name="com.onedot.onedotoneke.activity.RegisterActivity"/>
-        <activity 
-            android:name="com.onedot.onedotoneke.activity.LoginActivity"/>
+        <activity android:name="com.onedot.onedotoneke.activity.CircleContentActivity"/>
+        <activity android:name="com.onedot.onedotoneke.activity.FriendsActivity"/>
+        <activity android:name="com.onedot.onedotoneke.activity.RegisterActivity"/>
+        <activity android:name="com.onedot.onedotoneke.activity.LoginActivity"/>
         <activity android:name="com.onedot.onedotoneke.activity.AddFriendActivity"/>
+        <activity android:name="com.onedot.onedotoneke.activity.WelcomeActivity"/>
+        <activity android:name="com.onedot.onedotoneke.activity.ContactContentActivity"/>
+        <activity android:name="com.onedot.onedotoneke.activity.ChatContentActivity"/>
         <!-- 设置环信应用的appkey -->
         <meta-data
             android:name="EASEMOB_APPKEY"
