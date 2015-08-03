@@ -9,15 +9,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.onedot.onedotoneke.R;
+import com.onedot.onedotoneke.activity.AddFriendActivity;
 import com.onedot.onedotoneke.activity.FriendsActivity;
 import com.onedot.onedotoneke.activity.MainActivity;
 import com.onedot.onedotoneke.base.BaseFragment;
 
 /*
- * author:莫胜磊
- * time：2015.7.30
- * class：ChatFragment
- * function：聊天界面
+ * @author:莫胜磊
+ * @time：2015.7.30
+ * @class：ChatFragment
+ * @function：聊天界面
  */
 public class ChatFragment extends BaseFragment implements View.OnClickListener{
 
@@ -52,7 +53,7 @@ public class ChatFragment extends BaseFragment implements View.OnClickListener{
 	public void onClick(View view) {
 		switch (view.getId()) {
 		case R.id.add:
-			startActivity(new Intent(getActivity(),FriendsActivity.class));
+			startActivity(new Intent(getActivity(),AddFriendActivity.class));
 			break;
 		default:
 			break;

@@ -22,6 +22,12 @@ import android.support.annotation.DrawableRes;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
+/*
+ * @author:ÄªÊ¤ÀÚ
+ * @time:2015.7.31
+ * @class:CircleImageView
+ * @function:Ô²½Ç ImageView
+ */
 public class CircleImageView extends ImageView {
 
     private static final ScaleType SCALE_TYPE = ScaleType.CENTER_CROP;

@@ -7,6 +7,12 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 import com.onedot.onedotoneke.base.BaseActivity;
 
+/*
+ * @author:莫胜磊
+ * @time:2015.7.31
+ * @class:SplashActivity
+ * @function:启动页
+ */
 public class SplashActivity extends BaseActivity {
 
 	private  final int sleepTime = 2000;
@@ -30,11 +36,12 @@ public class SplashActivity extends BaseActivity {
 							e.printStackTrace();
 						}
 					}
-					startActivity(new Intent(SplashActivity.this, MainActivity.class));
+					startActivity(new Intent(SplashActivity.this, RegisterActivity.class));
 					finish();
 			}
 		}).start();
 	}
+	
 	/**
 	 * 获取当前应用程序的版本号
 	 */

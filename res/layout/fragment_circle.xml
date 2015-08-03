@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/list_view_circle"
-            android:divider="#FFCC00"
+            android:divider="#F0F0F0"
             android:dividerHeight="1px"
             android:listSelector="@drawable/list_item_selector"
             android:background="@color/white"/>

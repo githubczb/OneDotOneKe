@@ -22,7 +22,7 @@
             <TextView 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="评论"
+                android:text="互联网"
                 android:background="@drawable/circle_line"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
@@ -35,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="3"
-                android:textColor="@color/dark"
+                android:textColor="#505050"
                 android:text="最近在飞机上读完了英特尔前CEO安迪·格鲁夫的《只有偏执狂才能生存》，其实这本书99年就出版了，中文版02年就出了，不过今天读起来还是挺有收获"/>
             
             <LinearLayout 
@@ -55,7 +55,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="sdfsdfdsfdsf"/>
+                    android:text="吴龙梅的日记"/>
             </LinearLayout>
         </LinearLayout>
         
@@ -78,13 +78,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" 3 评论"
-                    android:textSize="10sp"/>
+                    android:textSize="10sp"
+                    android:textColor="#D2D2D2"/>
                 <TextView 
                     android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" 4 赞"
-                    android:textSize="10sp"/> 
+                    android:textSize="10sp"
+                    android:textColor="#D2D2D2"/> 
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

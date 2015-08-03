@@ -18,10 +18,10 @@ import com.onedot.onedotoneke.base.BaseFragment;
 import com.onedot.onedotoneke.view.RefreshLayout;
 import com.onedot.onedotoneke.view.RefreshLayout.OnRefreshListener;
 /*
- * author:ÄªÊ¤ÀÚ
- * time£º2015.7.30
- * class:CircleFragment
- * function:È¦×Ó
+ * @author:ÄªÊ¤ÀÚ
+ * @time£º2015.7.30
+ * @class:CircleFragment
+ * @function:È¦×Ó
  */
 public class CircleFragment extends BaseFragment implements OnItemClickListener{
 
@@ -44,7 +44,7 @@ public class CircleFragment extends BaseFragment implements OnItemClickListener{
 		mListViewCircle = (ListView)view.findViewById(R.id.list_view_circle);
 		mRefreshLayout = (RefreshLayout)view.findViewById(R.id.refresh_layout);
 		
-		mRefreshLayout.setRefreshCompleteListener(new OnRefreshListener() {
+		mRefreshLayout.setRefreshListener(new OnRefreshListener() {
 			
 			@Override
 			public void refresh() {
