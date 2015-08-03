@@ -41,6 +41,9 @@
             android:name="com.onedot.onedotoneke.activity.CircleContentActivity"
             />
         <activity 
+            android:name="com.onedot.onedotoneke.activity.OneDotDetailActivity"
+            />
+        <activity 
             android:name="com.onedot.onedotoneke.activity.FriendsActivity"/>
         <activity 
             android:name="com.onedot.onedotoneke.activity.SplashActivity">
