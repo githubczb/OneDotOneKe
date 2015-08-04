@@ -3,9 +3,9 @@ package com.onedot.onedotoneke;
 import android.content.Context;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @time:2015.7.31
- * @function:ĞÅ¸ëÍÆËÍHandler
+ * @function: ä¿¡é¸½æ¨é€å¤„ç†ç±»
  * @class:XinGePushHandler
  */
 public class XinGePushHandler {

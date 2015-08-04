@@ -7,12 +7,10 @@ import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.http.message.BasicNameValuePair;
 
 import com.onedot.onedotoneke.R;
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -32,6 +30,7 @@ import android.widget.Toast;
 
 
 public class Utils {
+	
 	public static void showLongToast(Context context, String pMsg) {
 		Toast.makeText(context, pMsg, Toast.LENGTH_LONG).show();
 	}
@@ -42,7 +41,8 @@ public class Utils {
 
 
 	/**
-	 * 判断是否有网�?	 */
+	 * 判断是否有网
+	 */
 	public static boolean isNetworkAvailable(Context context) {
 		if (context.checkCallingOrSelfPermission(Manifest.permission.INTERNET) != PackageManager.PERMISSION_GRANTED) {
 			return false;
@@ -69,7 +69,7 @@ public class Utils {
 	}
 
 	/**
-	 * 发�?文字通知
+	 * 发送文字通知
 	 * 
 	 * @param context
 	 * @param Msg
@@ -111,7 +111,7 @@ public class Utils {
 	}
 
 	/**
-	 * 获取SharedPreference �?	 * 
+	 * 获取SharedPreference
 	 * @param context
 	 * @param key
 	 * @return
@@ -152,7 +152,7 @@ public class Utils {
 	}
 
 	/**
-	 * 设置SharedPreference �?	 * 
+	 * 设置SharedPreference �?	 * 
 	 * @param context
 	 * @param key
 	 * @param value
@@ -170,7 +170,7 @@ public class Utils {
 	}
 
 	/**
-	 * 设置SharedPreference �?	 * 
+	 * 设置SharedPreference �?	 * 
 	 * @param context
 	 * @param key
 	 * @param value
@@ -186,11 +186,13 @@ public class Utils {
 		return true;
 	}
 
+	/*
+	 * string 转换 成 Date
+	 */
 	public static Date stringToDate(String str) {
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm");
 		Date date = null;
 		try {
-			// Fri Feb 24 00:00:00 CST 2012
 			date = format.parse(str);
 		} catch (ParseException e) {
 			e.printStackTrace();
@@ -213,7 +215,7 @@ public class Utils {
 	}
 
 	/**
-	 * 验证手机�?	 * 
+	 * 验证手机
 	 * @param mobiles
 	 * @return
 	 */
@@ -225,7 +227,7 @@ public class Utils {
 	}
 
 	/**
-	 * 验证是否是数�?	 * 
+	 * 验证是否是数字
 	 * @param str
 	 * @return
 	 */
@@ -240,7 +242,7 @@ public class Utils {
 	}
 
 	/**
-	 * 获取版本�?	 * 
+	 * 获取版本号
 	 * @return 当前应用的版本号
 	 */
 	public static String getVersion(Context context) {
@@ -259,7 +261,7 @@ public class Utils {
 	private static float sDensity = 0;
 
 	/**
-	 * DP转换为像�?	 * 
+	 * DP转换为像素
 	 * @param context
 	 * @param nDip
 	 * @return

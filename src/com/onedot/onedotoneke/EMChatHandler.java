@@ -9,10 +9,10 @@ import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMGroupManager;
 
 /*
- * @author:ÄªÊ¤ÀÚ
- * @time£º2015.7.31
+ * @author:è«èƒœç£Š
+ * @timeï¿½ï¿½2015.7.31
  * @class:EMChatHelper
- * @function:»·ĞÅµÄ°ïÖúÀà
+ * @function:ç¯ä¿¡å¸®åŠ©ç±»
  */
 public class EMChatHandler {
 	
@@ -31,28 +31,22 @@ public class EMChatHandler {
 	}
 	
 	/*
-	 * ³õÊ¼»¯
+	 * åˆå§‹åŒ–
 	 */
 	public void init(Context context) {
 		
 		mContext = context;
 		EMChat.getInstance().init(mContext);
-		/**
-		 * debugMode == true Ê±Îª´ò¿ª£¬sdk »áÔÚlogÀïÊäÈëµ÷ÊÔĞÅÏ¢
-		 * @param debugMode
-		 * ÔÚ×ö´úÂë»ìÏıµÄÊ±ºòĞèÒªÉèÖÃ³Éfalse
-		 */
 		EMChat.getInstance().setDebugMode(true);
 	}
 	
 	/*
-	 * ¿Í»§¶Ë×¢²á£¬½öÓÃÔÚ²âÊÔ»·¾³ÏÂ
+	 * ç¯ä¿¡æ³¨å†Œ
 	 */
 	public void register(final String name,final String password){
 		new Thread(new Runnable() {
 		    public void run() {
 		      try {
-		         // µ÷ÓÃsdk×¢²á·½·¨
 		         EMChatManager.getInstance().createAccountOnServer(name, password);
 		      } catch (final Exception e) {
 		    	  
@@ -61,16 +55,15 @@ public class EMChatHandler {
 	}
 	
 	/*
-	 * ¿Í»§¶ËµÇÂ¼
+	 * ç¯ä¿¡ç™»å½•
 	 */
 	public void login(final String name,final String password){
 		
-		EMChatManager.getInstance().login(name,password,new EMCallBack() {//»Øµ÷
+		EMChatManager.getInstance().login(name,password,new EMCallBack() {//ï¿½Øµï¿½
 			@Override
 			public void onSuccess() {
 				EMGroupManager.getInstance().loadAllGroups();
 				EMChatManager.getInstance().loadAllConversations();
-				Log.d("main", "µÇÂ½ÁÄÌì·şÎñÆ÷³É¹¦£¡");
 			}
 		 
 			@Override
@@ -80,7 +73,6 @@ public class EMChatHandler {
 		 
 			@Override
 			public void onError(int code, String message) {
-				Log.d("main", "µÇÂ½ÁÄÌì·şÎñÆ÷Ê§°Ü£¡");
 			}
 		});
 	}

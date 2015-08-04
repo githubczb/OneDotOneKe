@@ -11,9 +11,9 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @time:2015.7.31
- * @function:ÌáĞÑ°ïÖúÀà
+ * @function:æé†’ å•ä¾‹ç±»
  * @class:NotificationHelper
  */
 public class NotificationHandler {
@@ -40,7 +40,7 @@ public class NotificationHandler {
 	}
 	
 	/*
-	 * Æô¶¯Í¨Öª
+	 * ï¿½ï¿½ï¿½ï¿½Í¨Öª
 	 */
 	public void setUpNormalNotification(){
 		Intent resultIntent = new Intent(mContext, LoginActivity.class);

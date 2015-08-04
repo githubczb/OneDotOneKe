@@ -6,9 +6,9 @@ import java.util.List;
 import android.app.Activity;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @time:2015.8.3
- * @function: ¹ÜÀí Activity
+ * @function: ç®¡ç† Activity
  * @class:AppManager
  */
 public class AppManager {
@@ -26,12 +26,12 @@ public class AppManager {
 	}
 	
 	/*
-	 * @parm Activity ÈİÆ÷
+	 * @parm Activity å®¹å™¨
 	 */
 	private List<Activity> mActivityList = new LinkedList<Activity>();
 	
 	/*
-	 * @parm ½«Activity ¼ÓÈëÈİÆ÷
+	 * @parm æ·»åŠ åˆ°å®¹å™¨ä¸­
 	 */
 	public void addActivity(Activity activity){
 		
@@ -40,7 +40,7 @@ public class AppManager {
 	}
 	
 	/*
-	 * @parm ¹Ø±ÕµôËùÓĞµÄActivity
+	 * @parm å…³é—­æ‰€æœ‰çš„Activity
 	 */
 	public void exit(){
 		try {
@@ -56,14 +56,14 @@ public class AppManager {
 	}
 	
 	/*
-	 * @parm ÒÆ³ıÌØ¶¨µÄActivity
+	 * @parm ç§»é™¤ç‰¹å®šçš„Activity
 	 */
 	public void removeActivity(Activity activity){
 		mActivityList.remove(activity);
 	}
 	
 	/*
-	 *@parm:ÒÆ³ıÖ¸¶¨ÀàµÄActivity 
+	 *@parm:æ ¹æ®ç±»åç§»é™¤Activity
 	 */
 	public void removeActivity(Class className){
 		

@@ -12,9 +12,9 @@ import android.content.DialogInterface.OnClickListener;
 import android.util.Log;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @time:2015.8.3
- * @function: Òì³£²¶»ñÀà
+ * @function: å…¨å±€æ•è· å¼‚å¸¸
  * @class:CrashHandler
  */
 public class CrashHandler implements UncaughtExceptionHandler{
@@ -36,7 +36,7 @@ public class CrashHandler implements UncaughtExceptionHandler{
 	}
 	
 	/*
-	 * @func:³õÊ¼»¯
+	 * @func:ï¿½ï¿½Ê¼ï¿½ï¿½
 	 * @param:context
 	 */
 	public void init(Context ctx) {
@@ -46,7 +46,7 @@ public class CrashHandler implements UncaughtExceptionHandler{
 	}
 	
 	/*
-	 * @func:²¶»ñÒì³£
+	 * @func:ï¿½ï¿½ï¿½ï¿½ï¿½ì³£
 	 */
 	@Override
 	public void uncaughtException(Thread arg0, Throwable arg1) {
@@ -56,8 +56,8 @@ public class CrashHandler implements UncaughtExceptionHandler{
 			public void run() {
 				AlertDialog.Builder builder = new Builder(mContext);
 				builder.setIcon(R.drawable.ic_launcher).setTitle(R.string.app_name)
-						.setMessage("³öÁËµãĞ¡ÒâÍâ")
-						.setPositiveButton("ÖØĞÂÆô¶¯", new OnClickListener() {
+						.setMessage("ï¿½ï¿½ï¿½Ëµï¿½Ğ¡ï¿½ï¿½ï¿½ï¿½")
+						.setPositiveButton("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", new OnClickListener() {
 							@Override
 							public void onClick(DialogInterface dialog,
 									int which) {
@@ -68,7 +68,7 @@ public class CrashHandler implements UncaughtExceptionHandler{
 								mContext.startActivity(i);
 								AppManager.getInstance().exit();
 							}
-						}).setNegativeButton("È¡Ïû", null).show();
+						}).setNegativeButton("È¡ï¿½ï¿½", null).show();
 			}
 		}.start();
 	}

@@ -25,10 +25,10 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 /*
- * @author:ÄªÊ¤ÀÚ
- * @class£ºMainActivity
+ * @author:è«èƒœç£Š
+ * @classï¿½ï¿½MainActivity
  * @time:2015/7/29
- * @function:Ö÷½çÃæMainActivity
+ * @function: ä¸»ç•Œé¢
  */
 public class MainActivity extends BaseActivity implements View.OnClickListener{
 
@@ -72,7 +72,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 		mtab4.setOnClickListener(this);
 		
 		mTitleText = (TextView)findViewById(R.id.title_text);
-		mTitleText.setText("Ò»µã");
+		mTitleText.setText(getString(R.string.onedot));
 		
 		mCurTab = 1;
 	}
@@ -90,28 +90,28 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 			if(mCurTab == 1)break;
 	        ft.replace(R.id.container, mOneDotFragment);
 	        ft.commit();
-	        mTitleText.setText("Ò»µã");
+	        mTitleText.setText(getString(R.string.onedot));
 	        mCurTab = 1;
 			break;
 		case R.id.tab2:
 			if(mCurTab == 2)break;
 	        ft.replace(R.id.container, mOneKeFragment);
 	        ft.commit();
-	        mTitleText.setText("Ò»¿Ì");
+	        mTitleText.setText(getString(R.string.oneke));
 	        mCurTab = 2;
 			break;
 		case R.id.tab3:
 			if(mCurTab == 3)break;
 	        ft.replace(R.id.container, mChatFragment);
 	        ft.commit();
-	        mTitleText.setText("ÁÄÌì");
+	        mTitleText.setText(getString(R.string.chat));
 	        mCurTab = 3;
 			break;
 		case R.id.tab4:
 			if(mCurTab == 4)break;
 	        ft.replace(R.id.container, mCircleFragment);
 	        ft.commit();
-	        mTitleText.setText("È¦×Ó");
+	        mTitleText.setText(getString(R.string.circle));
 	        mCurTab = 4;
 			break;
 		default:

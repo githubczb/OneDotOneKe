@@ -6,18 +6,17 @@ import com.onedot.onedotoneke.receiver.NewMessageReceiver;
 import android.app.Application;
 import android.content.Context;
 import android.content.IntentFilter;
+import android.os.Environment;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @time:2015.7.31
- * @class£ºOneDotApplication
- * @function:Ò»µãÒ»¿Ì Appliction
+ * @class OneDotApplication
+ * @function:åº”ç”¨ç¨‹åº Application
  */
-public class OneDotApplication extends Application {
+public class App extends Application {
 
-	private static final String TAG = "OneDotApplication";
-	
-	private static OneDotApplication instance;
+	private static App instance;
 	
 	private EMChatHandler mEmChatHelper;
 	
@@ -29,11 +28,15 @@ public class OneDotApplication extends Application {
 	
 	private NewMessageReceiver msgReceiver;
 	
-    public static OneDotApplication sharedApplication() {
+    public synchronized static App sharedApplication() {
     	assert(instance != null);
     	return instance;
     	}
-	    
+	
+    public Context getContext(){
+    	return mContext;
+    }
+    
 	@Override
 	public void onCreate() {
 		super.onCreate();
@@ -51,10 +54,21 @@ public class OneDotApplication extends Application {
 		CrashHandler crashHandler = CrashHandler.getInstance();
 		crashHandler.init(mContext);
 		
-		//Ö»ÓĞ×¢²áÁË¹ã²¥²ÅÄÜ½ÓÊÕµ½ĞÂÏûÏ¢£¬Ä¿Ç°ÀëÏßÏûÏ¢£¬ÔÚÏßÏûÏ¢¶¼ÊÇ×ß½ÓÊÕÏûÏ¢µÄ¹ã²¥£¨ÀëÏßÏûÏ¢Ä¿Ç°ÎŞ·¨¼àÌı£¬ÔÚµÇÂ¼ÒÔºó£¬½ÓÊÕÏûÏ¢¹ã²¥»áÖ´ĞĞÒ»´ÎÄÃµ½ËùÓĞµÄÀëÏßÏûÏ¢£©
         msgReceiver = new NewMessageReceiver();
         IntentFilter intentFilter = new IntentFilter(EMChatManager.getInstance().getNewMessageBroadcastAction());
         intentFilter.setPriority(3);
         registerReceiver(msgReceiver, intentFilter);
+	}
+
+	/*
+	 * è·å–app ç¼“å­˜ç›®å½•
+	 */
+	public static String getAppCacheDir() {
+		if (Environment.getExternalStorageState().equals(
+				Environment.MEDIA_MOUNTED))
+			return Environment.getExternalStorageDirectory().toString()
+					+ "/Health/Cache";
+		else
+			return "/System/com.juns.Walk/Walk/Cache";
 	}
 }

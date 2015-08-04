@@ -1,10 +1,10 @@
 package com.onedot.onedotoneke.base;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @time:2015.7,31
  * @class:BaseAdapter
- * @function:»ù´¡Adapter£¬ËùÓĞµÄAdapter¶¼Òª¼Ì³ĞBaseAdapter
+ * @function: åŸºç¡€Adapter
  */
 public abstract class BaseAdapter extends android.widget.BaseAdapter{
 	

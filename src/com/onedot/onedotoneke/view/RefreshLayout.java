@@ -15,10 +15,10 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:èŽ«èƒœç£Š
  * @time:2015.7.31
  * @class:RefreshLayout
- * @function:ÏÂÀ­Ë¢ÐÂµÄ ListView Layout
+ * @function:åˆ·æ–° Layout
  */
 public class RefreshLayout extends LinearLayout implements OnScrollListener{
 
@@ -38,7 +38,7 @@ public class RefreshLayout extends LinearLayout implements OnScrollListener{
 	
 	private int curStatus = STATUS_FINISHED;
 	
-	//¹¹Ôìº¯Êý
+	//ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½
 	public RefreshLayout(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		mHeader = LayoutInflater.from(context).inflate(R.layout.layout_pull_to_fresh_header, null, true);
@@ -47,15 +47,15 @@ public class RefreshLayout extends LinearLayout implements OnScrollListener{
 	}
 	
 	/*
-	 * @ÉèÖÃË¢ÐÂµÄ¼àÌýÆ÷
+	 * @ï¿½ï¿½ï¿½ï¿½Ë¢ï¿½ÂµÄ¼ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @onRefreshListener
-	 * @Ë¢ÐÂ¼àÌýÆ÷
+	 * @Ë¢ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	public void setRefreshListener(OnRefreshListener onRefreshListener){
 		mOnRefreshListener = onRefreshListener;
 	}
 	
-	//Ë¢ÐÂ½áÊø
+	//Ë¢ï¿½Â½ï¿½ï¿½ï¿½
 	public void refreshComplete(){
 		
 		if(curStatus == STATUS_RELEASE)
@@ -76,7 +76,7 @@ public class RefreshLayout extends LinearLayout implements OnScrollListener{
 	        }  
 	}
 	
-	//À¹½Ø¼àÌýÊÂ¼þ
+	//ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
 	@Override  
     public boolean onInterceptTouchEvent(MotionEvent ev) {  
         final int action = MotionEventCompat.getActionMasked(ev);  
@@ -125,7 +125,7 @@ public class RefreshLayout extends LinearLayout implements OnScrollListener{
     return true;  
 	}
 	
-	//²âÁ¿º¯Êý
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
@@ -140,19 +140,19 @@ public class RefreshLayout extends LinearLayout implements OnScrollListener{
         setMeasuredDimension(width, finalHeight); 
 	}
 	
-	//²¼¾Öº¯Êý
+	//ï¿½ï¿½ï¿½Öºï¿½ï¿½ï¿½
 	@Override
 	protected void onLayout(boolean changed, int l, int t, int r, int b) {
 		super.onLayout(changed, l, t, r, b);
 		mListView = (ListView)getChildAt(1);
 		mListView.setOnScrollListener(this);
-		// ¼ÆËã³õÊ¼»¯»¬¶¯µÄyÖá¾àÀë  
+		// ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½yï¿½ï¿½ï¿½ï¿½ï¿½  
         mInitScrollY = mHeader.getMeasuredHeight();
         scrollTo(0, mInitScrollY);
 	}
 	
 	/** 
-     * ÐÞ¸ÄyÖáÉÏµÄ¹ö¶¯Öµ£¬´Ó¶øÊµÏÖheader±»ÏÂÀ­µÄÐ§¹û 
+     * ï¿½Þ¸ï¿½yï¿½ï¿½ï¿½ÏµÄ¹ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½Ó¶ï¿½Êµï¿½ï¿½headerï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ 
      * @param distance 
      * @return 
      */  
@@ -172,7 +172,7 @@ public class RefreshLayout extends LinearLayout implements OnScrollListener{
 		refreshComplete();
 	}
 
-	//Ë¢ÐÂ½Ó¿Ú
+	//Ë¢ï¿½Â½Ó¿ï¿½
 	public interface OnRefreshListener{
 		
 		public void refresh();
