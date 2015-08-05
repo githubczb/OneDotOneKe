@@ -1,7 +1,6 @@
 package com.onedot.onedotoneke;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.easemob.EMCallBack;
 import com.easemob.chat.EMChat;

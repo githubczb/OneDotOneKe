@@ -49,8 +49,10 @@
         <activity android:name="com.onedot.onedotoneke.activity.AddFriendActivity"/>
         <activity android:name="com.onedot.onedotoneke.activity.WelcomeActivity"/>
         <activity android:name="com.onedot.onedotoneke.activity.ContactContentActivity"/>
-        <activity android:name="com.onedot.onedotoneke.activity.ChatContentActivity"/>
+        <activity android:name="com.onedot.onedotoneke.activity.ChatContentActivity"
+            android:windowSoftInputMode="adjustResize"/>
         <activity android:name="com.onedot.onedotoneke.activity.OneDotDetailActivity"/>
+        <service android:name="com.onedot.onedotoneke.service.MessageHandlerService"/>
         <!-- 设置环信应用的appkey -->
         <meta-data
             android:name="EASEMOB_APPKEY"

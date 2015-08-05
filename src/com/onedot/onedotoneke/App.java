@@ -28,15 +28,24 @@ public class App extends Application {
 	
 	private NewMessageReceiver msgReceiver;
 	
+	/*
+	 * 获取实例
+	 */
     public synchronized static App sharedApplication() {
     	assert(instance != null);
     	return instance;
     	}
-	
+	/*
+	 * 获取context
+	 */
     public Context getContext(){
     	return mContext;
     }
     
+    /*
+     * (non-Javadoc)
+     * @see android.app.Application#onCreate()
+     */
 	@Override
 	public void onCreate() {
 		super.onCreate();

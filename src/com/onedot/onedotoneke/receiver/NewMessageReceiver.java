@@ -5,6 +5,7 @@ import com.easemob.chat.EMConversation;
 import com.easemob.chat.EMMessage;
 import com.easemob.chat.EMMessage.ChatType;
 import com.onedot.onedotoneke.NotificationHandler;
+import com.onedot.onedotoneke.service.MessageHandlerService;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -13,37 +14,33 @@ import android.util.Log;
 import android.widget.Toast;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @time:2015.8.3
  * @class:NewMessageReceiver
- * @function: ½ÓÊÕÏûÏ¢µÄ½ÓÊÕÆ÷
+ * @function: æ–°æ¶ˆæ¯ æ¥å¬å™¨
  */
 public class NewMessageReceiver extends BroadcastReceiver {
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
 
-		// ×¢Ïú¹ã²¥
 		abortBroadcast();
- 
-		Log.d("ee","receive");
 		Toast.makeText(context, "receiver", Toast.LENGTH_LONG).show();
 		NotificationHandler.getInstance().setUpNormalNotification();
-		// ÏûÏ¢id£¨Ã¿ÌõÏûÏ¢¶¼»áÉú³ÉÎ¨Ò»µÄÒ»¸öid£¬Ä¿Ç°ÊÇSDKÉú³É£©
 		String msgId = intent.getStringExtra("msgid");
-		//·¢ËÍ·½
 		String username = intent.getStringExtra("from");
-		// ÊÕµ½Õâ¸ö¹ã²¥µÄÊ±ºò£¬messageÒÑ¾­ÔÚdbºÍÄÚ´æÀïÁË£¬¿ÉÒÔÍ¨¹ıid»ñÈ¡mesage¶ÔÏó
 		EMMessage message = EMChatManager.getInstance().getMessage(msgId);
 		EMConversation	conversation = EMChatManager.getInstance().getConversation(username);
-		// Èç¹ûÊÇÈºÁÄÏûÏ¢£¬»ñÈ¡µ½group id
 		if (message.getChatType() == ChatType.GroupChat) {
 			username = message.getTo();
+		}else if(message.getChatType() == ChatType.Chat){
+			Toast.makeText(context, "chat", Toast.LENGTH_LONG).show();
+		}else if(message.getChatType() == ChatType.ChatRoom){
+			Toast.makeText(context, "chat_room", Toast.LENGTH_LONG).show();
 		}
-		if (!username.equals(username)) {
-			// ÏûÏ¢²»ÊÇ·¢¸øµ±Ç°»á»°£¬return
-			return;
-		}
+		
+		Intent intent2 = new Intent(context,MessageHandlerService.class);
+		context.startService(intent2);
 	}
 
 }

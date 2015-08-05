@@ -1,19 +1,48 @@
 package com.onedot.onedotoneke.activity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
+import com.onedot.onedotoneke.R;
 import com.onedot.onedotoneke.base.BaseActivity;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @time:2015/7.31
- * @function:ÓëÄ³ÈËÁÄÌìµÄActivity
+ * @function:èŠå¤©å†…å®¹ é¡µé¢
  * @class:ChatWithOneActivity
  */
-public class ChatContentActivity extends BaseActivity {
+public class ChatContentActivity extends BaseActivity implements View.OnClickListener{
 
+	private View mBack;
+	private TextView mTitle;
+	
 	@Override
 	protected void onCreate(Bundle arg0) {
 		super.onCreate(arg0);
+		setContentView(R.layout.activity_chat_content);
+		initViews();
+	}
+
+	private void initViews() {
+		mBack = findViewById(R.id.back_frame);
+		mBack.setOnClickListener(this);
+		mBack.setVisibility(View.VISIBLE);
+		
+		mTitle = (TextView)findViewById(R.id.title_text);
+		mTitle.setText("è«èƒœç£Š");
+	}
+
+	@Override
+	public void onClick(View view) {
+		switch (view.getId()) {
+		case R.id.back_frame:
+			finish();
+			break;
+
+		default:
+			break;
+		}
 	}
 }

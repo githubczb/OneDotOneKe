@@ -65,7 +65,7 @@ public class AppManager {
 	/*
 	 *@parm:根据类名移除Activity
 	 */
-	public void removeActivity(Class className){
+	public void removeActivity(@SuppressWarnings("rawtypes") Class className){
 		
 		try{
 			for(Activity activity : mActivityList){

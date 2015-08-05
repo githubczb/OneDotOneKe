@@ -34,5 +34,9 @@ public class Constants {
 		public static final String Result = "status";
 		public static final String DB_NAME = "WeChat.db";
 		public static final String NET_ERROR = "网络错误，请稍后再试！";
-		public static final String BaiduPullKey = "Uvw5AMP15i9v1cUoS5aY7GR1";
+		
+		public static final String BaseUrl = "192.168.1.2:8080";
+		
+		public static final String RegisterUrl = BaseUrl + "/users/register";
+		
 }

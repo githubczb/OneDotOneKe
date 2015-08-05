@@ -25,6 +25,9 @@ public class XinGePushHandler {
 		return mXinGePushHandler;
 	}
 	
+	/*
+	 * 初始化
+	 */
 	public void init(Context context) {
 		this.mContext = context;
 	}

@@ -1,27 +1,19 @@
 package com.onedot.onedotoneke.activity;
 
-import com.easemob.chat.EMChatManager;
-import com.easemob.chat.EMConversation;
-import com.easemob.chat.EMMessage;
-import com.easemob.chat.EMMessage.ChatType;
-import com.onedot.onedotoneke.NotificationHandler;
 import com.onedot.onedotoneke.R;
 import com.onedot.onedotoneke.base.BaseActivity;
+import com.onedot.onedotoneke.dialog.DialogUtil;
 import com.onedot.onedotoneke.fragment.ChatFragment;
 import com.onedot.onedotoneke.fragment.CircleFragment;
 import com.onedot.onedotoneke.fragment.OneDotFragment;
 import com.onedot.onedotoneke.fragment.OneKeFragment;
+import com.onedot.onedotoneke.service.MessageHandlerService;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 
 /*
@@ -57,6 +49,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         ft.replace(R.id.container, mOneDotFragment);
         ft.commit();
         
+        DialogUtil.showProgressDialog(this);
+        Intent intent2 = new Intent(this,MessageHandlerService.class);
+		startService(intent2);
     }
 
 	private void initTabs() {

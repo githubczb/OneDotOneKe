@@ -33,6 +33,9 @@ public class NotificationHandler {
 		return mNotificationHander;
 	}
 	
+	/*
+	 * @func:初始化
+	 */
 	public void init(Context context) {
 		this.mContext = context;
 		mNotificationManager =
@@ -40,7 +43,7 @@ public class NotificationHandler {
 	}
 	
 	/*
-	 * ����֪ͨ
+	 * 普通提醒
 	 */
 	public void setUpNormalNotification(){
 		Intent resultIntent = new Intent(mContext, LoginActivity.class);

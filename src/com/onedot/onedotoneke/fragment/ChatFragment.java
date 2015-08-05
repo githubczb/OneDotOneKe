@@ -1,7 +1,10 @@
 package com.onedot.onedotoneke.fragment;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -10,20 +13,21 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import com.easemob.chat.EMChatManager;
 import com.onedot.onedotoneke.R;
 import com.onedot.onedotoneke.activity.AddFriendActivity;
 import com.onedot.onedotoneke.activity.ChatContentActivity;
-import com.onedot.onedotoneke.activity.FriendsActivity;
 import com.onedot.onedotoneke.activity.MainActivity;
 import com.onedot.onedotoneke.adapter.ChatListAdapter;
 import com.onedot.onedotoneke.base.BaseFragment;
 
 /*
- * @author:ÄªÊ¤ÀÚ
- * @time£º2015.7.30
- * @class£ºChatFragment
- * @function£ºÁÄÌì½çÃæ
+ * @author:ÄªÊ¤ï¿½ï¿½
+ * @timeï¿½ï¿½2015.7.30
+ * @classï¿½ï¿½ChatFragment
+ * @functionï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 public class ChatFragment extends BaseFragment implements View.OnClickListener,OnItemClickListener{
 
@@ -58,6 +62,10 @@ public class ChatFragment extends BaseFragment implements View.OnClickListener,O
 		mAddView = mMainActivity.getAddView();
 		mAddView.setVisibility(View.VISIBLE);
 		mAddView.setOnClickListener(this);
+		
+		IntentFilter intentFilter = new IntentFilter("intent to receive message");
+        intentFilter.setPriority(3);
+        getActivity().registerReceiver(messageReceiver, intentFilter);
 		return view;
 	}
 
@@ -76,4 +84,15 @@ public class ChatFragment extends BaseFragment implements View.OnClickListener,O
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 		startActivity(new Intent(getActivity(),ChatContentActivity.class));
 	}
+	
+	private BroadcastReceiver messageReceiver = new  BroadcastReceiver() {
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			
+			Toast.makeText(getActivity(), "------", Toast.LENGTH_LONG).show();
+		}
+
+	};
+
 }
