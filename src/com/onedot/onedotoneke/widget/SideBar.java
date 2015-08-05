@@ -15,7 +15,12 @@ import android.widget.ListView;
 import android.widget.SectionIndexer;
 import android.widget.TextView;
 
-
+/*
+ * @author:莫胜磊
+ * @time:2015.8.5
+ * @class:SideBar
+ * @function:索引 bar
+ */
 public class SideBar extends View {
 	private char[] l;
 	private SectionIndexer sectionIndexter = null;

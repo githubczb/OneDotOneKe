@@ -7,10 +7,10 @@ import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 
 /*
- * @author:ÄªÊ¤ÀÚ
- * @time£º2015.7.31
+ * @author:è«èƒœç£Š
+ * @timeï¿½ï¿½2015.7.31
  * @class:BaseActivity
- * @function:»ù´¡Activity£¬ËùÓĞµÄActivity¶¼Òª¼Ì³ĞÕâ¸öÀà
+ * @function:åŸºç¡€Activity
  */
 public class BaseActivity extends FragmentActivity {
 

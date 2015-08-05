@@ -5,6 +5,12 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.widget.Toast;
 
+/*
+ * @author:莫胜磊
+ * @time:2015.8.5
+ * @class:MessageHandlerService
+ * @function:处理消息的Service
+ */
 public class MessageHandlerService extends IntentService {
 
 	 public MessageHandlerService(){

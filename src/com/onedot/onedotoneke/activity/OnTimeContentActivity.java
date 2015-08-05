@@ -5,10 +5,10 @@ import android.os.Bundle;
 import com.onedot.onedotoneke.base.BaseActivity;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @time:2015.8.3
- * @function: ¶¨Ê±ÏûÏ¢ µÄÏêÇé Ò³Ãæ
- * @class£ºOnTimeContentActivity
+ * @function: å®šæ—¶æ¶ˆæ¯è¯¦æƒ… é¡µé¢
+ * @classï¿½ï¿½OnTimeContentActivity
  */
 public class OnTimeContentActivity extends BaseActivity {
 

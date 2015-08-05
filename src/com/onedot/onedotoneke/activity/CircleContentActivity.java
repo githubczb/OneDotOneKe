@@ -7,10 +7,10 @@ import com.onedot.onedotoneke.R;
 import com.onedot.onedotoneke.base.BaseActivity;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @time:2015.7.31
  * @class:CircleContentActivity
- * @function:È¦×ÓÏêÇéÒ³
+ * @function:åœˆå­ å†…å®¹ é¡µé¢
  */
 public class CircleContentActivity extends BaseActivity implements View.OnClickListener{
 

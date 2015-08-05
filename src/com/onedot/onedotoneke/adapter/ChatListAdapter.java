@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 import com.onedot.onedotoneke.R;
 import com.onedot.onedotoneke.base.BaseAdapter;
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @time:2015.7.31
- * @function:ÁÄÌìÁĞ±íµÄAdapter
+ * @function:èŠå¤© Adapter
  * @class:ChatListAdapter
  */
 public class ChatListAdapter extends BaseAdapter {

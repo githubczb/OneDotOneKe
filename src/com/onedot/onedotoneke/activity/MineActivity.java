@@ -5,10 +5,10 @@ import android.os.Bundle;
 import com.onedot.onedotoneke.base.BaseActivity;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @time:2015.8.3
  * @class:MineActivity
- * @function: ÎÒµÄÒ³Ãæ
+ * @function:æˆ‘çš„é¡µé¢
  */
 public class MineActivity extends BaseActivity {
 

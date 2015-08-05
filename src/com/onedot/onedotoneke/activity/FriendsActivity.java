@@ -7,10 +7,10 @@ import com.onedot.onedotoneke.R;
 import com.onedot.onedotoneke.base.BaseActivity;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @time:2015.7.31
  * @class:FriendActivity
- * @function:ÁªÏµÈË
+ * @function:è”ç³»äººåˆ—è¡¨
  */
 public class FriendsActivity extends BaseActivity implements View.OnClickListener{
 

@@ -23,10 +23,10 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 
 /*
- * @author:Īʤ��
+ * @author:莫胜磊
  * @time:2015.7.31
  * @class:CircleImageView
- * @function:Բ�� ImageView
+ * @function:圆角 ImageView
  */
 public class CircleImageView extends ImageView {
 

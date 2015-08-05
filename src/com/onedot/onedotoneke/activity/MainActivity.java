@@ -18,7 +18,7 @@ import android.widget.TextView;
 
 /*
  * @author:莫胜磊
- * @class��MainActivity
+ * @class:MainActivity
  * @time:2015/7/29
  * @function: 主界面
  */

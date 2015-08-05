@@ -22,7 +22,6 @@ public class OneDotDetailActivity extends BaseActivity implements View.OnClickLi
 		mBackFrame.setOnClickListener(this);
 		
 		content = (TextView) findViewById(R.id.item_detail);
-		content.setText("我是华丽丽的信息，我是华丽丽的信息，我是华丽丽的信息，我是华丽丽的信息，我是华丽丽的信息，我是华丽丽的信息，我是华丽丽的信息。，我是华丽丽的信息，我是华丽丽的信息，我是华丽丽的信息，我是华丽丽的信息，我是华丽丽的信息，我是华丽丽的信息，我是华丽丽的信息，我是华丽丽的信息，我是华丽丽的信息，我是华丽丽的信息，我是华丽丽的信息");
 	}
 
 	@Override

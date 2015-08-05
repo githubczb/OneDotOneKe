@@ -8,10 +8,10 @@ import android.os.Bundle;
 import com.onedot.onedotoneke.base.BaseActivity;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @time:2015.7.31
  * @class:SplashActivity
- * @function:Æô¶¯Ò³
+ * @function:å¯åŠ¨ é¡µé¢
  */
 public class SplashActivity extends BaseActivity {
 
@@ -43,7 +43,7 @@ public class SplashActivity extends BaseActivity {
 	}
 	
 	/**
-	 * »ñÈ¡µ±Ç°Ó¦ÓÃ³ÌĞòµÄ°æ±¾ºÅ
+	 * ï¿½ï¿½È¡ï¿½ï¿½Ç°Ó¦ï¿½Ã³ï¿½ï¿½ï¿½Ä°æ±¾ï¿½ï¿½
 	 */
 	private String getVersion() {
 		String st = "worong";

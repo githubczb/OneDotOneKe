@@ -10,10 +10,10 @@ import com.onedot.onedotoneke.R;
 import com.onedot.onedotoneke.base.BaseActivity;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @class:LoginActivity
  * @time:2015.7.31
- * @function:µÇÂ¼½çÃæ
+ * @function: ç™»å½•é¡µé¢
  */
 public class LoginActivity extends BaseActivity implements View.OnClickListener{
 

@@ -18,10 +18,10 @@ import com.onedot.onedotoneke.base.BaseFragment;
 import com.onedot.onedotoneke.view.RefreshLayout;
 import com.onedot.onedotoneke.view.RefreshLayout.OnRefreshListener;
 /*
- * @author:ÄªÊ¤ÀÚ
- * @time£º2015.7.30
+ * @author:è«èƒœç£Š
+ * @time:2015.7.30
  * @class:CircleFragment
- * @function:È¦×Ó
+ * @function:åœˆå­
  */
 public class CircleFragment extends BaseFragment implements OnItemClickListener{
 

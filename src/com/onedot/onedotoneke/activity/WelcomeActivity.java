@@ -9,10 +9,10 @@ import com.onedot.onedotoneke.R;
 import com.onedot.onedotoneke.base.BaseActivity;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @time:2015.8.3
  * @class:WelcomeActivity
- * @function:»¶Ó­Ò³Ãæ
+ * @function:æ¬¢è¿ é¡µé¢
  */
 public class WelcomeActivity extends BaseActivity implements View.OnClickListener{
 

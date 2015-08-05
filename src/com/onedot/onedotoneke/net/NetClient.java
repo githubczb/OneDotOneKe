@@ -26,6 +26,12 @@ import com.onedot.onedotoneke.R;
 import com.onedot.onedotoneke.common.NetUtil;
 import com.onedot.onedotoneke.common.Utils;
 
+/*
+ * @author:莫胜磊
+ * @time:2015.8.5
+ * @class:NetClient
+ * @function:网络请求 客户端
+ */
 public class NetClient {
 
 	private static Context context;

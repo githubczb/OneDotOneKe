@@ -6,10 +6,10 @@ import com.onedot.onedotoneke.R;
 import com.onedot.onedotoneke.base.BaseActivity;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @time:2015.8.3
- * @function: Ä³¸öÁªÏµÈËµÄÏêÇéÒ³
- * @class£ºFriendContentActivity
+ * @function: è”ç³»äºº è¯¦æƒ… é¡µé¢
+ * @class:FriendContentActivity
  */
 public class ContactContentActivity extends BaseActivity {
 

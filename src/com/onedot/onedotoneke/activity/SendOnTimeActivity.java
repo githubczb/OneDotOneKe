@@ -5,10 +5,10 @@ import android.os.Bundle;
 import com.onedot.onedotoneke.base.BaseActivity;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @time:2015.8.3
  * @class:SendOnTimeActivity
- * @function: ·¢ËÍ¶¨Ê±ÏûÏ¢Ò³Ãæ
+ * @function: å‘é€å®šæ—¶æ¶ˆæ¯ é¡µé¢
  */
 public class SendOnTimeActivity extends BaseActivity {
 

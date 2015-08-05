@@ -17,9 +17,9 @@ import com.onedot.onedotoneke.R;
 import com.onedot.onedotoneke.base.BaseActivity;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @time:2015.7.31
- * @function:Ìí¼ÓÁªÏµÈË½çÃæ
+ * @function:æ·»åŠ æœ‹å‹
  * @class:AddFriendActivity
  */
 public class AddFriendActivity extends BaseActivity {
@@ -40,9 +40,9 @@ public class AddFriendActivity extends BaseActivity {
 		
 		mTextView = (TextView) findViewById(R.id.add_list_friends);
 		editText = (EditText) findViewById(R.id.edit_note);
-		String strAdd = "Ìí¼Ó";
+		String strAdd = "ï¿½ï¿½ï¿½";
 		mTextView.setText(strAdd);
-		String strUserName = "ÓÃ»§";
+		String strUserName = "ï¿½Ã»ï¿½";
 		editText.setHint(strUserName);
 		searchedUserLayout = (LinearLayout) findViewById(R.id.ll_user);
 		nameText = (TextView) findViewById(R.id.name);
@@ -52,27 +52,14 @@ public class AddFriendActivity extends BaseActivity {
 	
 	}
 	
-	/**
-	 * ²éÕÒcontact
-	 * @param v
-	 */
 	public void searchContact(View v) {
 		final String name = editText.getText().toString();
 		String saveText = searchBtn.getText().toString();
-		
-			
-			// TODO ´Ó·şÎñÆ÷»ñÈ¡´Ëcontact,Èç¹û²»´æÔÚÌáÊ¾²»´æÔÚ´ËÓÃ»§
-			
-			//·şÎñÆ÷´æÔÚ´ËÓÃ»§£¬ÏÔÊ¾´ËÓÃ»§ºÍÌí¼Ó°´Å¥
 			searchedUserLayout.setVisibility(View.VISIBLE);
 			nameText.setText(toAddUsername);
 			
 	}	
 	
-	/**
-	 *  Ìí¼Ócontact
-	 * @param view
-	 */
 	public void addContact(View view){
 		
 		progressDialog = new ProgressDialog(this);
@@ -85,7 +72,6 @@ public class AddFriendActivity extends BaseActivity {
 			public void run() {
 				
 				try {
-					//demoĞ´ËÀÁË¸öreason£¬Êµ¼ÊÓ¦¸ÃÈÃÓÃ»§ÊÖ¶¯ÌîÈë
 					String s = "sdf";
 					EMContactManager.getInstance().addContact(toAddUsername, s);
 					runOnUiThread(new Runnable() {

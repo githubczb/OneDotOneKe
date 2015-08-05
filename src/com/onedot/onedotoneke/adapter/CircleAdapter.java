@@ -9,10 +9,10 @@ import com.onedot.onedotoneke.R;
 import com.onedot.onedotoneke.base.BaseAdapter;
 
 /*
- * @author:ÄªÊ¤ÀÚ
+ * @author:è«èƒœç£Š
  * @time:2015.7.31
  * @class:CircleAdapter
- * @function:È¦×ÓµÄÊÊÅäÆ÷
+ * @function:åœˆå­ Adapter
  */
 public class CircleAdapter extends BaseAdapter {
 

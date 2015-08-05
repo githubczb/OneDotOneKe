@@ -24,10 +24,10 @@ import com.onedot.onedotoneke.adapter.ChatListAdapter;
 import com.onedot.onedotoneke.base.BaseFragment;
 
 /*
- * @author:Īʤ��
- * @time��2015.7.30
- * @class��ChatFragment
- * @function���������
+ * @author:莫胜磊
+ * @time：2015.7.30
+ * @class：ChatFragment
+ * @function 聊天 Fragment
  */
 public class ChatFragment extends BaseFragment implements View.OnClickListener,OnItemClickListener{
 

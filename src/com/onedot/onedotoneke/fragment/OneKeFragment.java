@@ -16,10 +16,10 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 /*
- * @author:ÄªÊ¤ÀÚ
- * @time£º2015.7.30
+ * @author:èŽ«èƒœç£Š
+ * @time:2015.7.30
  * @class:OneKeFragment
- * @function:Ò»¿Ì
+ * @function: ä¸€åˆ»
  */
 public class OneKeFragment extends BaseFragment implements View.OnClickListener,OnItemClickListener {
 
