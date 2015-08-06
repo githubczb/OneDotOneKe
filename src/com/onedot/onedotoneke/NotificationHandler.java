@@ -43,6 +43,7 @@ public class NotificationHandler {
 	}
 	
 	/*
+	 * @parm:null
 	 * 普通提醒
 	 */
 	public void setUpNormalNotification(){
