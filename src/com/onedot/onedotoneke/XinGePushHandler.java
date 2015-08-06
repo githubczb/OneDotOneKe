@@ -15,8 +15,15 @@ public class XinGePushHandler {
 	
 	private XinGePushHandler(){}
 	
+	/*
+	 * @parm Context
+	 */
 	private Context mContext;
 	
+	/*
+	 * 共享实例
+	 * @parm null
+	 */
 	public static synchronized XinGePushHandler getInstance(){
 		
 		if(mXinGePushHandler == null){
