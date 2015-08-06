@@ -15,7 +15,7 @@ public class OneDotDetailActivity extends BaseActivity implements View.OnClickLi
 	@Override
 	protected void onCreate(Bundle arg0) {
 		super.onCreate(arg0);
-		setContentView(R.layout.onedot_detail);
+		setContentView(R.layout.activity_onedot_detail);
 		
 		mBackFrame = findViewById(R.id.back_frame);
 		mBackFrame.setVisibility(View.VISIBLE);
